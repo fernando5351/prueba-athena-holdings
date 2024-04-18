@@ -1,38 +1,13 @@
 "use client"
-import Image from 'next/image';
-import Task from '@/components/task';
 import { useState, useEffect } from 'react'
-import { ITask } from '@/interface/task';
 import api from '@/api';
 import Swal from 'sweetalert2';
 
-export default function Home() {
-
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
-  const [status, setStatus] = useState('');
-  const [dueDate, setDueDate] = useState('');
-  const [items, setItems] = useState<ITask[]>([]);
-
-  useEffect(() => {
-    getTask();
-  }, []);
-
-  const getTask = () => {
-    const options = {
-      method: 'GET',
-      headers: {
-        'x-api-key': api.api_key
-      }
-    };
-
-    fetch(`${api.api_url}/items`, options)
-    .then(response => response.json())
-    .then(response => {
-        setItems(response);
-      })
-    .catch(err => console.error(err));
-  };
+export default function Login () {
+    const [title, setTitle] = useState('');
+    const [description, setDescription] = useState('');
+    const [status, setStatus] = useState('');
+    const [dueDate, setDueDate] = useState('');
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -40,24 +15,9 @@ export default function Home() {
     console.log({ title, description, status, dueDate });
   };
 
-  return (
-    <main className="container flex min-h-screen flex-col m-4 items-center justify-between p-24">
-      <div className="row justify-content-center">
-        <div className="col-12 m-2">
-          <div className="col-6 justify-content-center">
-          <button type="button" tabIndex={-1} className="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Crear nueva tarea
-          </button>
-
-          <div className="modal fade" id="exampleModal" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div className="modal-dialog">
-              <div className="modal-content">
-                <div className="modal-header">
-                  <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div className="modal-body">
-                <form className="modal-content" onSubmit={handleSubmit}>
+    return (
+        <div className="container">
+            <form className="modal-content" onSubmit={handleSubmit}>
                     <div className="modal-header">
                       <h5 className="modal-title" id="exampleModalLabel">Agregar Tarea</h5>
                       <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -102,24 +62,6 @@ export default function Home() {
                       </button>
                     </div>
                   </form>
-                </div>
-                <div className="modal-footer">
-                  <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                  <button type="button" className="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          </div>
         </div>
-        <div className="col-12 d-flex flex-row bd-highlight mb-3">
-            {items.map((item) => (
-              <div className="col-6" key={item.id}>
-                <Task item={item} />
-              </div>
-            ))}
-        </div>
-      </div>
-    </main>
-  )
+    );
 }
