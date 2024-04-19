@@ -4,8 +4,9 @@
 To run the project, navigate to the root folder and execute the following commands:
 
 ```bash
-npm install
+npm install # Install dependencies
 npm run dev
+```
 
 
 ### Project Description
