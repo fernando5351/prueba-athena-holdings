@@ -80,7 +80,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="row justify-content-start">
+      <div className="row justify-content-center">
         <div className="col-12 col-lg-12 d-flex flex-wrap"> 
           {filteredItems.map((item) => (
             <div className="col-12 col-md-6 col-lg-5 m-2" key={item.id}>
