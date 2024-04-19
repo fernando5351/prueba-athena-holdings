@@ -11,7 +11,8 @@ npm run dev
 ### Project Description
 The project is a todo list application where users can create, edit, retrieve, and delete tasks. It provides functionality to filter tasks based on their status.
 
-### Screenshot
+## Screenshot
+
 ### sidebar view
 ![sidebar](https://github.com/fernando5351/prueba-athena-holdings/assets/101905044/0fdb63f1-5128-4997-9d07-1ac3601f937c)
 
