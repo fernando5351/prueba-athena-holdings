@@ -16,19 +16,19 @@ The project is a todo list application where users can create, edit, retrieve, a
 ### sidebar view
 ![sidebar](https://github.com/fernando5351/prueba-athena-holdings/assets/101905044/0fdb63f1-5128-4997-9d07-1ac3601f937c)
 
-###list tasks view
+### List tasks view
 ![todo_list](https://github.com/fernando5351/prueba-athena-holdings/assets/101905044/50fd119c-e2a0-4654-abae-d331307dd135)
 
-###create view
+### Create view
 ![create](https://github.com/fernando5351/prueba-athena-holdings/assets/101905044/23925b82-6d3a-4ba5-bd76-28ac777d313d)
 
-###delete view
+### Update view
 ![update](https://github.com/fernando5351/prueba-athena-holdings/assets/101905044/c0c0e906-7935-435e-a885-d74fe2793a75)
 
-###delete view 
+### Delete view 
 ![delete](https://github.com/fernando5351/prueba-athena-holdings/assets/101905044/f21233b5-6dfd-4b27-bb74-3bc425451f7b)
 
-###user view
+### User view
 ![user](https://github.com/fernando5351/prueba-athena-holdings/assets/101905044/4dd29034-314c-4d98-b80f-e4b5b5de79d7)
 
 
