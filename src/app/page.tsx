@@ -67,7 +67,7 @@ export default function Home() {
         </div>
         <div className="col-12 col-lg-6 d-flex justify-content-center">
           <div className="input-group mb-3">
-            <label className="input-group-text" htmlFor="filterSelect">Filtrar por estado</label>
+            <label className="input-group-text" htmlFor="filterSelect">Filtrar</label>
             <select className="form-select" id="filterSelect" value={filter} onChange={handleFilterChange}>
               <option value="">Todos</option>
               <option value="todo">Por hacer</option>
@@ -75,7 +75,7 @@ export default function Home() {
               <option value="done">Completadas</option>
             </select>
             {filter && (
-              <button className="btn btn-outline-danger" onClick={clearFilter}>Limpiar filtro</button>
+              <button className="btn btn-outline-danger" onClick={clearFilter}>Limpiar</button>
             )}
           </div>
         </div>
