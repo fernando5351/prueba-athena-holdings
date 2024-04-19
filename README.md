@@ -4,10 +4,9 @@
 To run the project, navigate to the root folder and execute the following commands:
 
 ```bash
-npm install # Install dependencies
+npm install
 npm run dev
 ```
-
 
 ### Project Description
 The project is a todo list application where users can create, edit, retrieve, and delete tasks. It provides functionality to filter tasks based on their status.
@@ -20,7 +19,7 @@ The project is a todo list application where users can create, edit, retrieve, a
 ![todo_list](https://github.com/fernando5351/prueba-athena-holdings/assets/101905044/50fd119c-e2a0-4654-abae-d331307dd135)
 
 ###create view
-(![create](https://github-production-user-asset-6210df.s3.amazonaws.com/101905044/324086893-23925b82-6d3a-4ba5-bd76-28ac777d313d.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAVCODYLSA53PQK4ZA%2F20240419%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240419T190047Z&X-Amz-Expires=300&X-Amz-Signature=2d1d1baa8b5e38861359b0b77b82ce5f0ad6aaef3af42b5ebfc784a8a5548919&X-Amz-SignedHeaders=host&actor_id=101905044&key_id=0&repo_id=788585891))
+![create](https://github.com/fernando5351/prueba-athena-holdings/assets/101905044/23925b82-6d3a-4ba5-bd76-28ac777d313d)
 
 ###delete view
 ![update](https://github.com/fernando5351/prueba-athena-holdings/assets/101905044/c0c0e906-7935-435e-a885-d74fe2793a75)
