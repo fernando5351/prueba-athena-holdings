@@ -54,27 +54,45 @@ const Task = ({ item }: { item: ITask }) => {
         });
     }
 
-    const onUpdate = (id: number) => {
-        
-    }
+    const statusClasses = {
+      todo: 'btn-warning',
+      doing: 'btn-info',
+      done: 'btn-success'
+    };  
 
+    const statusNames = {
+      todo: 'Por hacer',
+      doing: 'En progreso',
+      done: 'Completado'
+    };
+    
     return (
       <div className="card shadow m-2" style={{ width: '100%' }}>
-        <div className="card-header">{item.name}</div>
+        <div className="card-header text-break">{item.name}</div>
         <div className="card-body">
-          <h5 className="card-title">{item.description}</h5>
-          <p className="card-text">{item.dueDate.toString()}</p>
-          <div className="d-flex">
-          <Link href={`/task/update/${item.id}`} className="btn btn-primary m-2">
-            Actualizar Elemento
-          </Link>
-          <Link href={`/task/update/${item.id}`}>
-            Actualizar
-          </Link>
-            <a onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => onDelete(item.id)} className="btn btn-danger m-2">Eliminar</a>
+          <div className="d-flex flex-row flex-aling-center mb-3">
+            <p className="fw-bold">Descripción:</p>
+            <p className="ms-1 text-break card-text fst-italic text-decoration-underline text-center m-0">{item.description}</p>
+          </div>
+          <div className="d-flex flex-row flex-aling-center mb-3">
+            <p className="fw-bold">Fecha a finalizar:</p>
+            <p className="ms-1 text-break card-text fst-italic text-decoration-underline">{new Date(item.dueDate).toISOString().split('T')[0]}</p>
+          </div>
+          <div className="d-flex flex-row flex-aling-center mb-3">
+            <p className="fw-bold">Estado:</p>
+            <p style={{cursor:'unset'}} className={`btn ${statusClasses[item.status]} m-1 text-center m-0`}>{statusNames[item.status]}</p>
+          </div>
+          <div className="mt-auto">
+            <div className="d-flex justify-content-end">
+              <Link href={`/task/update/${item.id}`} className="btn btn-primary m-2">
+                Actualizar
+              </Link>
+              <a onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => onDelete(item.id)} className="btn btn-danger m-2">Eliminar</a>
+            </div>
           </div>
         </div>
       </div>
+
     );
 }
 

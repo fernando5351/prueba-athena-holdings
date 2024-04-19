@@ -4,16 +4,6 @@
   box-sizing: border-box;
 }
 
-.tasks {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: calc(-1* var(--bs-gutter-y));
-  margin-right: calc(-.5* var(--bs-gutter-x));
-  margin-left: calc(-.5* var(--bs-gutter-x));
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-around;
-  align-items: center;
-  width: vh;
-  background: red;
+.custom-width {
+  width: 100% !important;
 }
